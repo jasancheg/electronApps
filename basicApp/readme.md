@@ -1,6 +1,6 @@
-# appname
+# Basic Web App
 
-> My splendid app 
+> Writing a simple web application 
 
 
 ## Dev

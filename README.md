@@ -2,7 +2,7 @@
 
 > Some personal apps written with [Electron](http://electron.atom.io)
 
-- [Basic Web App](https://github.com/jasancheg/electronApps/basicApp)
+- [Basic Web App](https://github.com/jasancheg/electronApps/tree/master/basicApp)
 
 
 ### Resources
