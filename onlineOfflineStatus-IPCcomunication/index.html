@@ -2,11 +2,12 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Simple Electron Web App</title>
+		<title>Rendered/Main process comunications (IPC)</title>
 		<link rel="stylesheet" href="index.css">
 	</head>
 	<body>
-		<h1>Simple Electron Web App</h1>
+		<h1>Message sent from a renderer process (web page)</h1>
+		<p>check browser console log and shell log</p>
 		<script>
 			var ipc = require('ipc');
 			var alertOnlineStatus = function() {

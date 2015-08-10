@@ -1,8 +1,8 @@
-# Rendered/Main process comunications (IPC)
+# Custom Frames and Rendered/Main process comunications (IPC)
 
-> Message sent from a renderer process (web page).
+> Change the native default window frames, Messages sent between renderer and main process.
 
-Asynchronous and synchronous message sent from a renderer process. The messages sent from the renderer are emitted to main module, the event name is the `channel` (online-status-changed on this case) when sending message. 
+Asynchronous and synchronous message sent between renderer and main process. The messages sent from the renderer process are emitted to main module. Events created for: `maximize`, `minimize`, `close` and `fullscreen` the main window.
 
 
 ## Dev
