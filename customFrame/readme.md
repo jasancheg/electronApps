@@ -1,4 +1,4 @@
-# Custom Frames and Rendered/Main process comunications (IPC)
+# Custom Frames and Rendered/Main process comunications (Chromium IPC)
 
 > Change the native default window frames, Messages sent between renderer and main process.
 

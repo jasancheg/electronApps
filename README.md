@@ -4,7 +4,7 @@
 
 - [Basic Web App](https://github.com/jasancheg/electronApps/tree/master/basicApp). Simple Web Application
 - [onlineOfflineStatus-IPCcomunication](https://github.com/jasancheg/electronApps/tree/master/onlineOfflineStatus-IPCcomunication). Rendered/Main process comunications (IPC)
-- [Custom Frames](https://github.com/jasancheg/electronApps/tree/master/customFrame) Custom Frames and Rendered/Main process comunications.
+- [Custom Frames](https://github.com/jasancheg/electronApps/tree/master/customFrame) Custom Frames and Rendered/Main process comunications
 
 
 ### Resources

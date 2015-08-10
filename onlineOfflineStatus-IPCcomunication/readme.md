@@ -1,4 +1,4 @@
-# Rendered/Main process comunications (IPC)
+# Rendered/Main process comunications (Chromium Inter Process Communication (Chromium IPC))
 
 > Message sent from a renderer process (web page).
 

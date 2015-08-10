@@ -4,6 +4,7 @@ body {
 	margin: 0;
 	background-color: #2b3e50;
 	height: 100%;
+    border-radius: 10px;
 }
 h1 {
 	font-family: 'Helvetica Neue', Helvetica, sans-serif;
