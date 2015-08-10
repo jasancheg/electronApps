@@ -2,7 +2,8 @@
 
 > Some personal apps written with [Electron](http://electron.atom.io)
 
-- [Basic Web App](https://github.com/jasancheg/electronApps/tree/master/basicApp)
+- [Basic Web App](https://github.com/jasancheg/electronApps/tree/master/basicApp). Simple Web Application
+- [onlineOfflineStatus-IPCcomunication](https://github.com/jasancheg/electronApps/tree/master/onlineOfflineStatus-IPCcomunication). Rendered/Main process comunications (IPC)
 
 
 ### Resources
