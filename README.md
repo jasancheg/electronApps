@@ -8,6 +8,7 @@
 - [Custom application menu](https://github.com/jasancheg/electronApps/tree/master/customApplicationMenu) Using `Menu` class to create an native application menu
 - [Custom global Shortcuts](https://github.com/jasancheg/electronApps/tree/master/customGlobalShortcuts) Create custom global shortcuts
 - [Custom frames](https://github.com/jasancheg/electronApps/tree/master/customFrame) Custom Frames, context menu and Rendered/Main process comunications
+- [SailsJS Application](https://github.com/jasancheg/electronApps/tree/master/sailsAsFrontEnd) Sails JS as application (not working yet)
 
 
 ### Resources
