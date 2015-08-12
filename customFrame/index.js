@@ -1,97 +1,69 @@
 'use strict';
-const app = require('app');
-const BrowserWindow = require('browser-window');
 
-const globalShortcut = require('global-shortcut');
+var ipc = require('ipc')
+var remote = require('remote');
+var Menu = remote.require('menu');
+var MenuItem = remote.require('menu-item');
+var titlebar = require('titlebar')();
+var $ = require('dombo');
 
+// create a context menu
+var menu = new Menu();
+menu.append(new MenuItem({ label: 'MenuItem1', click: function() { console.log('item 1 clicked'); } }));
+menu.append(new MenuItem({ type: 'separator' }));
+menu.append(new MenuItem({ label: 'MenuItem2', type: 'checkbox', checked: true }));
+menu.append(new MenuItem({ label: 'Toggle Dev Tools', click: function() { ipc.send('toggle-dev-tools'); } }));
 
-// report crashes to the Electron project
-require('crash-reporter').start();
+window.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+    menu.popup(remote.getCurrentWindow());
+}, false);
 
-// adds debug features like hotkeys for triggering dev tools and reload
-require('electron-debug')();
-
-function createMainWindow () {
-	const win = new BrowserWindow({
-		title: 'Web App',
-		width: 800,
-		height: 600,
-		x: 0,
-		y: 0,
-		//center: true,
-		//transparent: true, 
-		//frame: false,
-		//resizable: true,
-		show: false,
-		//'min-width': 600,
-		'min-height': 500,
-		'web-preferences': {
-			'overlay-scrollbars': true
-		}
-		//'auto-hide-menu-bar': false,
-		//'accept-first-mouse': false
-	});
-
-	win.loadUrl('file://' + __dirname + '/index.html');
-	win.on('closed', onClosed);
-
-	return win;
+// append custom header frame to page on PC and Mac
+if (process.platform !== 'linux') {
+    titlebar.appendTo('#titlebar')
 }
 
-function onClosed() {
-	// deref the window
-	// for multiple windows store them in an array
-	mainWindow = null;
+var isFullscreen = false;
+
+var onfullscreentoggle = function (e) {
+
+    if (!isFullscreen && e.shiftKey) {
+        ipc.send('resize', {
+        //width: media.width,
+        //height: media.height,
+        //ratio: media.ratio
+        });
+        return
+    }
+
+    if (isFullscreen) {
+        isFullscreen = false
+        //$('#titlebar')[0].style.display = 'block';
+        ipc.send('exit-full-screen');
+    } else {
+        isFullscreen = true;
+        //$('#titlebar')[0].style.display = 'none';
+        ipc.send('enter-full-screen');
+    }
+
 }
 
-// prevent window being GC'd
-let mainWindow;
-
-app.on('window-all-closed', function () {
-	if (process.platform !== 'darwin') {
-		app.quit();
-	}
+titlebar.on('close', function () {
+    ipc.send('close');
 });
 
-app.on('activate-with-no-open-windows', function () {
-	if (!mainWindow) {
-		mainWindow = createMainWindow();
-	}
+titlebar.on('minimize', function () {
+    ipc.send('minimize');
 });
 
-app.on('ready', function () {
-	mainWindow = createMainWindow();
-
-	// Open the devtools.
-  	// mainWindow.openDevTools();
-
-	setTimeout(function(){
-		mainWindow.show();
-	}, 500);
-
-	app.on('before-quit', function (event) {
-		console.log("before quit", app.getAppPath());
-		//event.preventDefault();
-	});
-
-	// Register a 'ctrl+x' shortcut listener.
-	var ret = globalShortcut.register('ctrl+x', function() {
-		console.log('ctrl+x is pressed');
-	})
-
-	if (!ret) {
-		console.log('registration failed');
-	}
-
-	// Check whether a shortcut is registered.
-	console.log(globalShortcut.isRegistered('ctrl+x'));
-
+titlebar.on('maximize', function () {
+    ipc.send('maximize');
 });
 
-app.on('will-quit', function() {
-  // Unregister a shortcut.
-  globalShortcut.unregister('ctrl+x');
+titlebar.on('fullscreen', onfullscreentoggle);
 
-  // Unregister all shortcuts.
-  globalShortcut.unregisterAll();
-});
+// send message to show window when page is done (dummy simulate for page load)
+setTimeout(function () {
+    ipc.send('ready')
+}, 500);

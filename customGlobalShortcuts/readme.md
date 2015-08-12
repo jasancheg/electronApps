@@ -1,15 +1,7 @@
-# Custom Frames and Rendered/Main process comunications (Chromium IPC)
+# Basic Web App
 
-> Change the native default window frames, Messages sent between renderer and main process.
+> Writing a simple web application
 
-Asynchronous and synchronous message sent between renderer and main process. The messages sent from the renderer process are emitted to main module. Main window listent to Events for: `ready`, `maximize`, `minimize`, `close`, `fullscreen`, `enter-full-screen`, `exit-full-screen` and `toggle-dev-tools`.
-
-###features
-
-- Add a custom title bar frame (mac look and feel) to Mac and PC
-- Create a custom context menu on the page
-- IPC comunications
-- custom global shortcut `Ctrl + x`
 
 ## Dev
 

@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "description": "Custom Frames and Rendered-Main process comunications",
   "license": "MIT",
-  "main": "index.js",
+  "main": "app.js",
   "repository": "jasancheg/electronApps",
   "author": {
     "name": "Jose Antonio Sanchez",
@@ -24,6 +24,7 @@
     "build-linux64": "electron-packager ./ CustomFrames --out=builds --ignore=builds --prune --asar --version=0.30.0 --icon=./../icons/smile_128x128.ico --platform=linux --arch=x64"
   },
   "files": [
+    "app.js",
     "index.js",
     "index.html",
     "index.css"
@@ -32,7 +33,9 @@
     "electron-app"
   ],
   "dependencies": {
-    "electron-debug": "^0.1.1"
+    "dombo": "^3.2.0",
+    "electron-debug": "^0.1.1",
+    "titlebar": "^1.3.0"
   },
   "devDependencies": {
     "electron-packager": "^5.0.0",
