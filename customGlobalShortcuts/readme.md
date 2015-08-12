@@ -1,6 +1,6 @@
-# Basic Web App
+# Custom global shortcuts
 
-> Writing a simple web application
+> Define some custom global shortcuts for the application
 
 
 ## Dev

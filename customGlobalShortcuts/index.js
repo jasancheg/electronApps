@@ -9,40 +9,52 @@ require('crash-reporter').start();
 require('electron-debug')();
 
 function createMainWindow () {
-	const win = new BrowserWindow({
-		title: 'Web App',
-		width: 800,
-		height: 600,
-		resizable: false
-	});
+    const win = new BrowserWindow({
+        title: 'Web App',
+        width: 800,
+        height: 600,
+        resizable: false
+    });
 
-	win.loadUrl(`file://${__dirname}/index.html`);
-	win.on('closed', onClosed);
+    win.loadUrl(`file://${__dirname}/index.html`);
+    win.on('closed', onClosed);
 
-	return win;
+    return win;
 }
 
 function onClosed() {
-	// deref the window
-	// for multiple windows store them in an array
-	mainWindow = null;
+    // deref the window
+    // for multiple windows store them in an array
+    mainWindow = null;
 }
 
 // prevent window being GC'd
 let mainWindow;
 
 app.on('window-all-closed', function () {
-	if (process.platform !== 'darwin') {
-		app.quit();
-	}
+    if (process.platform !== 'darwin') {
+        app.quit();
+    }
 });
 
 app.on('activate-with-no-open-windows', function () {
-	if (!mainWindow) {
-		mainWindow = createMainWindow();
-	}
+    if (!mainWindow) {
+        mainWindow = createMainWindow();
+    }
 });
 
 app.on('ready', function () {
-	mainWindow = createMainWindow();
+    mainWindow = createMainWindow();
+
+    // Register a 'ctrl+x' shortcut listener.
+    var ret = globalShortcut.register('ctrl+x', function() {
+        console.log('ctrl+x is pressed');
+    })
+
+    if (!ret) {
+        console.log('registration failed');
+    }
+
+    // Check whether a shortcut is registered.
+    console.log(globalShortcut.isRegistered('ctrl+x'));
 });

@@ -1,8 +1,8 @@
 {
-  "name": "basicApp",
-  "appName": "BasicApp",
+  "name": "customGlobalShortcuts",
+  "appName": "CustomGlobalShortcuts",
   "version": "0.0.0",
-  "description": "My splendid app",
+  "description": "Custom global shortcuts for the app",
   "license": "MIT",
   "main": "index.js",
   "repository": "jasancheg/electronApps",
@@ -16,12 +16,12 @@
   },
   "scripts": {
     "start": "electron .",
-    "build": "electron-packager ./ BasicApp --out=builds --ignore=builds --prune --asar --all --version=0.30.0 --icon=./../icons/smile_128x128.ico",
-    "build-mac": "electron-packager ./ BasicApp --out=builds --ignore=builds --prune --asar --version=0.30.0 --icon=./../icons/smile_128x128.ico --platform=darwin --arch=x64",
-    "build-win32": "electron-packager ./ BasicApp --out=builds --ignore=builds --prune --asar --version=0.30.0 --icon=./../icons/smile_128x128.ico --platform=win32 --arch=ia32",
-    "build-win64": "electron-packager ./ BasicApp --out=builds --ignore=builds --prune --asar --version=0.30.0 --icon=./../icons/smile_128x128.ico --platform=win32 --arch=x64",
-    "build-linux32": "electron-packager ./ BasicApp --out=builds --ignore=builds --prune --asar --version=0.30.0 --icon=./../icons/smile_128x128.ico --platform=linux --arch=ia32",
-    "build-linux64": "electron-packager ./ BasicApp --out=builds --ignore=builds --prune --asar --version=0.30.0 --icon=./../icons/smile_128x128.ico --platform=linux --arch=x64"
+    "build": "electron-packager ./ CustomGlobalShortcuts --out=builds --ignore=builds --prune --asar --all --version=0.30.0 --icon=./../icons/smile_128x128.ico",
+    "build-mac": "electron-packager ./ CustomGlobalShortcuts --out=builds --ignore=builds --prune --asar --version=0.30.0 --icon=./../icons/smile_128x128.ico --platform=darwin --arch=x64",
+    "build-win32": "electron-packager ./ CustomGlobalShortcuts --out=builds --ignore=builds --prune --asar --version=0.30.0 --icon=./../icons/smile_128x128.ico --platform=win32 --arch=ia32",
+    "build-win64": "electron-packager ./ CustomGlobalShortcuts --out=builds --ignore=builds --prune --asar --version=0.30.0 --icon=./../icons/smile_128x128.ico --platform=win32 --arch=x64",
+    "build-linux32": "electron-packager ./ CustomGlobalShortcuts --out=builds --ignore=builds --prune --asar --version=0.30.0 --icon=./../icons/smile_128x128.ico --platform=linux --arch=ia32",
+    "build-linux64": "electron-packager ./ CustomGlobalShortcuts --out=builds --ignore=builds --prune --asar --version=0.30.0 --icon=./../icons/smile_128x128.ico --platform=linux --arch=x64"
   },
   "files": [
     "index.js",
