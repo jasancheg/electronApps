@@ -9,6 +9,7 @@
 - [Custom global Shortcuts](https://github.com/jasancheg/electronApps/tree/master/customGlobalShortcuts) Create custom global shortcuts
 - [Custom frames](https://github.com/jasancheg/electronApps/tree/master/customFrame) Custom Frames, context menu and Rendered/Main process comunications
 - [SailsJS Application](https://github.com/jasancheg/electronApps/tree/master/sailsAsFrontEnd) Sails JS as application (not working yet)
+- [SailsJS + AngularJS Application](https://github.com/jasancheg/electronApps/tree/master/sailsAsRestAPI-angularAsFrontEnd) Sails js as rest API and angular as Front End Application(working on it).
 
 
 ### Resources
