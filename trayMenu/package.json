@@ -1,0 +1,41 @@
+{
+  "name": "trayMenu",
+  "appName": "TrayMenu",
+  "version": "0.0.0",
+  "description": "My splendid app",
+  "license": "MIT",
+  "main": "index.js",
+  "repository": "jasancheg/electronApps",
+  "author": {
+    "name": "Jose Antonio Sanchez",
+    "email": "your@email.com",
+    "url": "inideaweb.com"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-packager ./ TrayMenu --out=builds --ignore=builds --prune --asar --all --version=0.30.0 --icon=../icons/smile_128x128.ico --overwrite",
+    "build-mac": "electron-packager ./ TrayMenu --out=builds --ignore=builds --prune --asar --version=0.30.0 --icon=../icons/smile_128x128.ico --platform=darwin --arch=x64 --overwrite",
+    "build-win32": "electron-packager ./ TrayMenu --out=builds --ignore=builds --prune --asar --version=0.30.0 --icon=../icons/smile_128x128.ico --platform=win32 --arch=ia32 --overwrite",
+    "build-win64": "electron-packager ./ TrayMenu --out=builds --ignore=builds --prune --asar --version=0.30.0 --icon=../icons/smile_128x128.ico --platform=win32 --arch=x64 --overwrite",
+    "build-linux32": "electron-packager ./ TrayMenu --out=builds --ignore=builds --prune --asar --version=0.30.0 --icon=../icons/smile_128x128.ico --platform=linux --arch=ia32 --overwrite",
+    "build-linux64": "electron-packager ./ TrayMenu --out=builds --ignore=builds --prune --asar --version=0.30.0 --icon=../icons/smile_128x128.ico --platform=linux --arch=x64 --overwrite"
+  },
+  "files": [
+    "index.js",
+    "index.html",
+    "index.css"
+  ],
+  "keywords": [
+    "electron-app"
+  ],
+  "dependencies": {
+    "electron-debug": "^0.1.1"
+  },
+  "devDependencies": {
+    "electron-packager": "^5.0.0",
+    "electron-prebuilt": "^0.30.0"
+  }
+}
