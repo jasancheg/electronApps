@@ -8,7 +8,7 @@
  * For more information on bootstrapping your app, check out:
  * http://sailsjs.org/#!/documentation/reference/sails.config/sails.config.bootstrap.html
  */
-var ipc = require('ipc');
+//var ipc = require('ipc');
 
 module.exports.bootstrap = function(cb) {
 
@@ -19,8 +19,6 @@ module.exports.bootstrap = function(cb) {
         session: sails.config.session,
         csrf: sails.config.csrf
     };
-
-    ipc.send('sails-lifted', initServerData);
 
     // It's very important to trigger this callback method when you are finished
     // with the bootstrap!  (otherwise your server will never lift, since it's waiting on the bootstrap)

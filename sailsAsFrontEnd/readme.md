@@ -6,6 +6,14 @@ Is not working yet, the application crashes after loading on the window
 
 ## Dev
 
+For use the [electron-packager](https://github.com/maxogden/electron-packager) cli
+
+```
+npm i electron-packager -g
+```
+
+install root dependencies
+
 ```
 $ npm install
 ```

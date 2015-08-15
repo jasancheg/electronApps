@@ -5,11 +5,6 @@ var remote = require('remote');
 var Menu = remote.require('menu');
 var MenuItem = remote.require('menu-item');
 
-
-// init the sails app
-var serverDir = '/sailsApp/app.js'
-var sapp = require(__dirname + serverDir);
-
 // create a context menu
 var menu = new Menu();
 
