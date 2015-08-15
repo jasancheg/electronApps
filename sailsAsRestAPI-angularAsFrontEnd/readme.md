@@ -10,7 +10,7 @@ Sails JS provide the Res API (Back End App) and Angular JS the user interface (F
 
 ## Dev
 
-for use the electron-packager cli
+For use the [electron-packager](https://github.com/maxogden/electron-packager) cli
 ```
 npm i electron-packager -g
 ```
