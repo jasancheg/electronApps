@@ -60,5 +60,5 @@ app.on('ready', function () {
 		{ label: 'Item4', type: 'radio' }
 	]);
 	appIcon.setToolTip('This is my application.');
-	w4appIcon.setContextMenu(contextMenu);
+	appIcon.setContextMenu(contextMenu);
 });
