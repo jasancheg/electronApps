@@ -9,10 +9,6 @@ require('crash-reporter').start();
 // adds debug features like hotkeys for triggering dev tools and reload
 require('electron-debug')();
 
-// init the sails app
-var serverDir = '/sailsApp/app.js'
-var sapp = require(__dirname + serverDir);
-
 function createMainWindow () {
 
     var win = new BrowserWindow({
@@ -33,11 +29,6 @@ function createMainWindow () {
     //win.openDevTools({detach: true});
 
     win.on('closed', onClosed);
-
-    ipc.on('sails-lifted', function (e, msg) {
-        // Is not working yet, the application crashes after loading on the window
-        win.loadUrl('file://' + __dirname + '/loaded.html');
-    });
 
     return win;
 }
@@ -67,16 +58,18 @@ app.on('activate-with-no-open-windows', function () {
     }
 });
 
+// init the sails app
+var serverDir = '/sailsApp/app.js'
+var sapp = require(__dirname + serverDir);
+
 // check sails lifted
 var socketIOClient = require('socket.io-client');
 var sailsIOClient = require('sails.io.js');
 
 // Instantiate the socket client (`io`)
-// (for now, you must explicitly pass in the socket.io client when using this library from Node.js)
 var io = sailsIOClient(socketIOClient);
 
-// Set some options:
-// (you have to specify the host and port of the Sails backend when using this library from Node.js)
+// specify the host and port of the Sails
 io.sails.url = 'http://localhost:1337';
 
 // Send a GET request to `http://localhost:1337/`:
