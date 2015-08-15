@@ -1,0 +1,23 @@
+{
+  "name": "sailsAsRestAPI-angularAsFrontEnd",
+  "main": "app.js",
+  "version": "0.0.0",
+  "homepage": "https://github.com/jasancheg/electronApps",
+  "authors": [
+    "Jose Antonio Sanchez <j.a.sanchez.gonzalez@accenture.com>"
+  ],
+  "description": "Sails js as rest API and angular as Front End Application",
+  "keywords": [
+    "sails",
+    "angular"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/client/bower_components",
+    "test",
+    "tests"
+  ]
+}
