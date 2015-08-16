@@ -10,6 +10,7 @@
 - [Tray API](https://github.com/jasancheg/electronApps/tree/master/trayAPI) An icon in operating system's notification area
 - [Custom frames](https://github.com/jasancheg/electronApps/tree/master/customFrame) Custom Frames, context menu and Rendered/Main process comunications
 - [SailsJS Application](https://github.com/jasancheg/electronApps/tree/master/sailsAsFrontEnd) Sails JS as application
+- [SailsJS as Rest API](https://github.com/jasancheg/electronApps/tree/master/sailsAsRestAPI) Sails JS as Rest API application and an simple user interface as client App
 - [SailsJS + AngularJS Application](https://github.com/jasancheg/electronApps/tree/master/sailsAsRestAPI-angularAsFrontEnd) Sails js as rest API and angular as Front End Application(working on it)
 
 

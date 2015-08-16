@@ -1,17 +1,13 @@
-# sails-angular-electron
+# sailsAsRestAPI
 
-> Basic cross platform desktop application built with [SailsJS](http://sailsjs.org/), [AngularJS](https://angularjs.org/) and [Electron](http://electron.atom.io/)
-
-(currently working on it...)
+> Basic cross platform desktop application built with [SailsJS](http://sailsjs.org/) and [Electron](http://electron.atom.io/)
 
 ### Features
 
 - Cross platform desktop application built with Electron (Mac OS, Windows, Linux)
 - Rest API built with Sailsjs (server App)
-- User interface built in Angularjs (client App)
+- Simple User Interface (client App)
 - *NeDB*, embedded persistent database with no dependency(except npm modules)
-- User authentication and session control (JWT, register, login, logout)
-- Simple Dashboard
 - Custom context menu
 
 ## Dev
